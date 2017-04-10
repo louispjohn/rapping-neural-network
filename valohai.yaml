@@ -1,8 +1,10 @@
 - step:
-    name: Install requirements
+    name: Run Model
     image: gcr.io/tensorflow/tensorflow:1.0.1-devel-gpu
-    command: pip install -U -r requirements.txt
+    command:
+      - pip install -U -r requirements.txt
+      - python deeprap.py
 - step:
-    name: Run deeprap
+    name: Generate Sound
     image: gcr.io/tensorflow/tensorflow:1.0.1-devel-gpu
-    command: python deeprap.py
+    command: python speechtest.py
