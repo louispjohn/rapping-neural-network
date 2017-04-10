@@ -1,8 +1,0 @@
-- step:
-    name: Install requirements
-    image: gcr.io/tensorflow/tensorflow:1.0.1-devel-gpu
-    command: pip install -U -r requirements.txt
-- step:
-    name: Run deeprap
-    image: gcr.io/tensorflow/tensorflow:1.0.1-devel-gpu
-    command: python deeprap.py
